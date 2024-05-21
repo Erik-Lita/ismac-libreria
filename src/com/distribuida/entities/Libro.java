@@ -18,7 +18,7 @@ public class Libro {
 	private String portada;
 	private String presentacion;
 	private double precio;
-	
+	//Hola mundo
 	
 	private Categoria categoria;
 	private Autor autor;
