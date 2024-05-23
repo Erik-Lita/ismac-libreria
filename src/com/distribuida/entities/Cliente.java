@@ -98,10 +98,5 @@ public class Cliente {
 				+ apellido + ", fechaNacimiento=" + fechaNacimiento + ", telefono=" + telefono + ", direccion="
 				+ direccion + ", correo=" + correo + "]";
 	}
-
-	
-
-	
-	
 	
 }

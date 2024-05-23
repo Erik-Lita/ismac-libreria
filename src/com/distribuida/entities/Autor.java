@@ -12,6 +12,8 @@ public class Autor {
 	
 	
 	public Autor () {}
+	
+	
 	public Autor(int idAutor, String nombre, String apellido, String pais, String direccion, String telefono,
 			String correo) {
 
@@ -22,6 +24,7 @@ public class Autor {
 		this.direccion = direccion;
 		this.telefono = telefono;
 		this.correo = correo;
+		
 	}
 	public int getIdAutor() {
 		return idAutor;

@@ -16,8 +16,6 @@ public class Factura {
 	
 	public Factura() {}
 
-
-
 	public Factura(int idFactura, String numfactura, Date fecha, double totalneto, double iva, double total
 			) {
 
@@ -28,6 +26,7 @@ public class Factura {
 		this.iva = iva;
 		this.total = total;
 		//this.idCliente = idCliente;
+		
 	}
 
 
