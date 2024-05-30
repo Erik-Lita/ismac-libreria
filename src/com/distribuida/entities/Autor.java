@@ -13,7 +13,7 @@ public class Autor {
 	
 	public Autor () {}
 	
-	
+	//constructor
 	public Autor(int idAutor, String nombre, String apellido, String pais, String direccion, String telefono,
 			String correo) {
 
@@ -28,6 +28,7 @@ public class Autor {
 	}
 	
 	//metodos getter and setter
+	
 	public int getIdAutor() {
 		return idAutor;
 	}
