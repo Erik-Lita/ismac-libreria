@@ -2,16 +2,40 @@ package com.distribuida.entities;
 
 import java.util.Date;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
+
+@Component
+@Entity
+@Table (name ="cliente")
+
+
 public class Cliente {
+	
 
 	// atributos
-	private int diCliente;
+	
+	@Id
+	@GeneratedValue(strategy =GenerationType.IDENTITY)
+	@Column (name="id_cliente")
+	private int idCliente;
+	@Column (name="cedula")
 	private String cedula;
+	@Column (name="nombre")
 	private String nombre;
+	@Column (name="apellido")
 	private String apellido;
-	private Date fechaNacimiento;
+	@Column (name="telefono")
 	private String telefono;
+	@Column (name="direccion")
 	private String direccion;
+	@Column (name="correo")
 	private String correo;
 	
 	//constructores
@@ -19,22 +43,21 @@ public class Cliente {
 
 	public Cliente(int diCliente, String cedula, String nombre, String apellido, Date fechaNacimiento, String telefono,
 			String direccion, String correo) {
-		this.diCliente = diCliente;
+		this.idCliente = diCliente;
 		this.cedula = cedula;
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.fechaNacimiento = fechaNacimiento;
 		this.telefono = telefono;
 		this.direccion = direccion;
 		this.correo = correo;
 	}
 //metodos getters and seterss
 	public int getDiCliente() {
-		return diCliente;
+		return idCliente;
 	}
 
 	public void setDiCliente(int diCliente) {
-		this.diCliente = diCliente;
+		this.idCliente = diCliente;
 	}
 
 	public String getCedula() {
@@ -61,13 +84,7 @@ public class Cliente {
 		this.apellido = apellido;
 	}
 
-	public Date getFechaNacimiento() {
-		return fechaNacimiento;
-	}
-
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
-	}
+	
 
 	public String getTelefono() {
 		return telefono;
@@ -94,8 +111,8 @@ public class Cliente {
 	}
 	@Override
 	public String toString() {
-		return "Cliente [diCliente=" + diCliente + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido="
-				+ apellido + ", fechaNacimiento=" + fechaNacimiento + ", telefono=" + telefono + ", direccion="
+		return "Cliente [diCliente=" + idCliente + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido="
+				+ apellido + ", fechaNacimiento="  + ", telefono=" + telefono + ", direccion="
 				+ direccion + ", correo=" + correo + "]";
 	}
 	
