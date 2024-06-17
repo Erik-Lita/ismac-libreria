@@ -11,6 +11,8 @@ public class PrincipalCliente {
 
 	public static void main(String[] args) {
 
+		
+		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 
 		ClienteDAO clienteDAO = context.getBean("clienteDAOImpl",ClienteDAO.class);
