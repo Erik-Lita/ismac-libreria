@@ -15,8 +15,8 @@ public class PrincipalCliente {
 		ClassPathXmlApplicationContext context =new ClassPathXmlApplicationContext("ApplicationContext.xml");
 
 		ClienteDAO clienteDAO =context.getBean("clienteDAOImpl",ClienteDAO.class);
-		List <Cliente> clientes=clienteDAO.findAll();
-		clientes.forEach(item ->{
+		List <Cliente> estudiante=clienteDAO.findAll();
+		estudiante.forEach(item ->{
 			
 			System.out.println(item.toString());
 		});
